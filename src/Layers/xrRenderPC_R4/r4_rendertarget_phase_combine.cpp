@@ -583,6 +583,13 @@ void CRenderTarget::phase_combine()
 	if (ssfx_PrevPos_Requiered)
 		HW.pContext->CopyResource(rt_ssfx_prevPos->pTexture->surface_get(), rt_Position->pTexture->surface_get());
 
+    //LVutner
+   if (ps_r2_anomaly_flags.test(R2_AN_FLAG_FLARES) && ps_r2_heatvision == 0) //--DSR-- HeatVision'
+   {
+        u_setrt(rt_lens_flare, 0, 0, HW.pBaseZB);
+		g_pGamePersistent->Environment().RenderFlares(); // lens-flares
+   }
+    
 	// PP enabled ?
 	//	Render to RT texture to be able to copy RT even in windowed mode.
 	BOOL PP_Complex = u_need_PP() | (BOOL)RImplementation.m_bMakeAsyncSS;
@@ -728,8 +735,6 @@ void CRenderTarget::phase_combine()
 
 	//	if FP16-BLEND !not! supported - draw flares here, overwise they are already in the bloom target
 	/* if (!RImplementation.o.fp16_blend)*/
-	if (ps_r2_anomaly_flags.test(R2_AN_FLAG_FLARES) && ps_r2_heatvision == 0) //--DSR-- HeatVision
-		g_pGamePersistent->Environment().RenderFlares(); // lens-flares
 
 	//	PP-if required
 	if (PP_Complex)
