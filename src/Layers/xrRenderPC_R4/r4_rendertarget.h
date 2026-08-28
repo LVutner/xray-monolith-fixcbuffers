@@ -146,6 +146,9 @@ public:
 	ref_rt rt_smaa_edgetex;
 	ref_rt rt_smaa_blendtex;
 
+    //LVutner
+	ref_rt rt_lens_flare;
+
 	//	Igor: for volumetric lights
 	ref_rt rt_Generic_2; // 32bit		(r,g,b,a)				// post-process, intermidiate results, etc.
 	ref_rt rt_Bloom_1; // 32bit, dim/4	(r,g,b,?)
