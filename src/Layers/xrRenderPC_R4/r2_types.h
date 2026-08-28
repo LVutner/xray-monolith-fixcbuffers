@@ -120,6 +120,9 @@
 
 #define		r2_RT_ssfx_prevPos		"$user$ssfx_prev_p" // Prev Position
 
+//LVutner
+#define r2_RT_lens_flare "$user$fuckmsaa" // Prev Position
+
 #define		JITTER(a) r2_jitter #a
 
 const float SMAP_near_plane = .1f;
