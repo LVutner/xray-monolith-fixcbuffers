@@ -639,6 +639,9 @@ CRenderTarget::CRenderTarget()
 
 		//rt_ssfx_hud.create(r2_RT_ssfx_hud, w, h, D3DFMT_A16B16G16R16F); // Deprecated
 
+        //LVutner
+        rt_lens_flare.create(r2_RT_lens_flare, w, h, D3DFMT_A8R8G8B8);
+        
 		if (RImplementation.o.dx10_msaa)
 		{
             rt_Generic_0_r.create(r2_RT_generic0_r, w, h, ps_r4_hdr10_on ? D3DFMT_A16B16G16R16F : D3DFMT_A8R8G8B8, SampleCount);
