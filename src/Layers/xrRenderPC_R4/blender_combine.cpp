@@ -115,6 +115,9 @@ void CBlender_combine::Compile(CBlender_Compile& C)
 		C.r_dx10Texture("s_lens_dirt", "shaders\\lens_dirt");
 		C.r_dx10Texture("s_noise_1", "shaders\\noise\\noise_tex");
 
+        //LVutner
+        C.r_dx10Texture("s_lens_flare", r2_RT_lens_flare);
+
 		C.r_dx10Sampler("smp_linear");
 		C.r_dx10Sampler("smp_nofilter");
 		C.r_dx10Sampler("smp_rtlinear");
@@ -175,6 +178,9 @@ void CBlender_combine::Compile(CBlender_Compile& C)
 		C.r_dx10Texture("s_lut_atlas", "shaders\\lut_atlas");
 		C.r_dx10Texture("s_lens_dirt", "shaders\\lens_dirt");
 		C.r_dx10Texture("s_noise_1", "shaders\\noise\\noise_tex");
+
+        //LVutner
+        C.r_dx10Texture("s_lens_flare", r2_RT_lens_flare);
 
 		C.r_dx10Sampler("smp_linear");
 		C.r_dx10Sampler("smp_nofilter");
