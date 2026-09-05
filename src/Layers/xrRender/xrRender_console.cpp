@@ -447,7 +447,7 @@ Fvector4 ps_ssfx_wetsurfaces_2 = { 1.0f, 1.0f, 1.0f, 1.0f }; // Wet surfaces 2
 int ps_ssfx_is_underground = 0;
 int ps_ssfx_gloss_method = 0;
 float ps_ssfx_gloss_factor = 0.5f;
-Fvector4  = { 0.0f,0.92f,0.0f,0.0f }; // Gloss
+Fvector4 ps_ssfx_gloss_minmax = { 0.0f,0.92f,0.0f,0.0f }; // Gloss
 
 Fvector4 ps_ssfx_lightsetup_1 = { 0.35f, 0.5f, 0.0f, 0.0f }; // Spec intensity
 
